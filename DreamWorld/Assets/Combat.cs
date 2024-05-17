@@ -5,58 +5,74 @@ using UnityEngine;
 public class Combat : MonoBehaviour
 {
     private Animator animator;
+    public float coldownTime = 2f;
+    private float nextFireTime = 0f;
+    public static int noOfClicks = 0;
+    float lastClickTime = 0;
+    float maxComboDelay = 1;
 
-    private int click;
-    private bool clickActive;
 
  
     void Start()
     {
-        animator = GetComponent<Animator>();
-        click = 0;
-        clickActive = true;
+     animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0))
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7 && animator.GetCurrentAnimatorStateInfo(0).IsName("attack_1"))
         {
-            Attack();
+            animator.SetBool("hit_1", false);
+        }
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7 && animator.GetCurrentAnimatorStateInfo(0).IsName("attack_2"))
+        {
+            animator.SetBool("hit_2", false);
+        }
+        if (animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7 && animator.GetCurrentAnimatorStateInfo(0).IsName("attack_3"))
+        {
+            animator.SetBool("hit_3", false);
+            noOfClicks = 0;
+        }
+
+        if(Time.time - lastClickTime> maxComboDelay)
+        {
+            noOfClicks = 0;
+        }
+        if(Time.time> nextFireTime)
+        {
+            if(Input.GetMouseButtonDown(0))
+            {
+                Onclick();
+            }
         }
     }
 
-    void Attack()
+    void Onclick()
     {
-        if(clickActive)
+        lastClickTime = Time.time;
+        noOfClicks++;
+        if(noOfClicks == 1)
         {
-            click++;
+            animator.SetBool("hit_1", true);
+
+        }
+        noOfClicks = Mathf.Clamp(noOfClicks, 0, 3);
+
+        if(noOfClicks>=2 && animator.GetCurrentAnimatorStateInfo(0).normalizedTime>0.7&& animator.GetCurrentAnimatorStateInfo(0).IsName("attack_1"))
+        {
+            animator.SetBool("hit_1", false);
+            animator.SetBool("hit_2", true);
+            
         }
 
-        if(click == 1)
+        if (noOfClicks >= 3 && animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 0.7 && animator.GetCurrentAnimatorStateInfo(0).IsName("attack_2"))
         {
-            animator.SetInteger("transition", 20);
+            animator.SetBool("hit_2", false);
+            animator.SetBool("hit_3", true);
+            
         }
+
     }
-
-    public void VerifyCombo()
-    {
-        clickActive = false;
-
-        if(animator.GetCurrentAnimatorStateInfo(0).IsName("Melee Combo Attack") && click == 1)
-        {
-            animator.SetInteger("transition", 0);
-            clickActive = true;
-            click = 0;
-        }else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Melee Combo Attack") && click >= 2)
-        {
-            animator.SetInteger("transition", 21);
-            clickActive = true;
-        }else if(animator.GetCurrentAnimatorStateInfo(0).IsName("Melee Attack 360 High") && click == 2)
-        {
-            animator.SetInteger("transition", 0);
-            clickActive = true;
-            click = 0;
-        }
-    }
+ 
 }

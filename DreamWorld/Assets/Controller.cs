@@ -14,14 +14,7 @@ public class Controller : MonoBehaviour
 
     private Animator animator;
 
-    [SerializeField] private LayerMask layerGround;
-    [SerializeField] private Transform groundCheck;
-    [SerializeField] private float rCheck;
 
-    [SerializeField] private float maxheght;
-    [SerializeField] private float timeMaxHeght;
-    private Vector3 yJumpForce;
-    private float jumpSpeed;
 
     //controlladores de estatus 
     public float velocity;
@@ -32,7 +25,6 @@ public class Controller : MonoBehaviour
 
     void Start()
     {
-        SetGravity();
         controller = GetComponent<CharacterController>();
         animator = GetComponent<Animator>();
         velocity = speed;
@@ -43,9 +35,6 @@ public class Controller : MonoBehaviour
     void Update()
     {
         Move();
-       GravityForce();
-
-        jumpForce();
     }
 
     void Move()
@@ -100,44 +89,6 @@ public class Controller : MonoBehaviour
 
         controller.Move(moveDirection * Time.deltaTime) ;
     }
-    private void SetGravity()
-    {
-        //calculo gravitacional
-        gravity = (maxheght * 2) / Mathf.Pow(timeMaxHeght,2);
-        jumpSpeed = gravity * timeMaxHeght;
-    }
-    private void GravityForce()
-    {
-        yJumpForce += gravity * Time.deltaTime * Vector3.down;
-        controller.Move(yJumpForce);
 
-        if (IsGrounded())
-        {
-            yJumpForce = Vector3.zero;
-        }
-    }
-
-    private void jumpForce()
-    {
-        if (IsGrounded())
-        {
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                animator.SetInteger("transition", 10);              
-                
-                yJumpForce = jumpSpeed * Vector3.up;
-                controller.Move(yJumpForce);
-                
-
-            }
-        }
-       
-        
-    }
-    private bool IsGrounded()
-    {
-        bool isGrounded = Physics.CheckSphere(groundCheck.position, rCheck, layerGround);
-            return isGrounded;
-    }
     
 }
