@@ -32,15 +32,12 @@ public class TerraCota_Attack : MonoBehaviour
         {
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
-                
-                animator.SetBool("attack",true);
-                
+
+                animator.SetTrigger("attack");
+                timePassed = 0;
+
             }
-            if(Vector3.Distance(player.transform.position, transform.position) > attackRange)
-            {
-                animator.SetBool("attack",false);
-                
-            }
+            
         }
         timePassed += Time.deltaTime;
         // Move();
