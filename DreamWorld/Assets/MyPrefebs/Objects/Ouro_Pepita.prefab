@@ -11,32 +11,32 @@ PrefabInstance:
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 158.26
+      value: 314.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.38739586
+      value: 46.14
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.3857155
+      value: 689.15
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f15f270d1313e5841adcd602b09ee216,
         type: 3}
@@ -91,6 +91,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 202673784783322236}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: f15f270d1313e5841adcd602b09ee216,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6192283487338501063}
   m_SourcePrefab: {fileID: 100100000, guid: f15f270d1313e5841adcd602b09ee216, type: 3}
 --- !u!1 &5230511748616250675 stripped
 GameObject:
@@ -119,3 +123,15 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019478519, y: 0.009918866, z: 0.007594349}
   m_Center: {x: 0.00009624241, y: -0.00065595645, z: -0.00007683619}
+--- !u!114 &6192283487338501063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5230511748616250675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dfd7eeb147dcd047a99d5fc6378e091, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

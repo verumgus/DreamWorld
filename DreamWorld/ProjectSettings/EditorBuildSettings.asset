@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/The_Viking_Village.unity
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/Island.unity
+    guid: 454305053f69d2048a13af9a3b43aba3
+  - enabled: 1
+    path: Assets/Scenes/DG_1.unity
+    guid: 4c410d4b3051ee84c85ac1383b1fbac5
+  - enabled: 1
+    path: Assets/Scenes/DG_2.unity
+    guid: 09f70985fd537c146b80b38aec6e2289
+  - enabled: 1
+    path: Assets/Scenes/DG_3.unity
+    guid: 5015764d6c2f3f54f81e7887bc36bcab
   m_configObjects: {}
