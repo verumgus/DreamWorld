@@ -96,7 +96,7 @@ public class ThirdPersonController : MonoBehaviour
         // Jump animation
         if( animator != null )
             animator.SetBool("air", cc.isGrounded == false );
-
+       
         // Handle can jump or not
         if ( inputJump && cc.isGrounded )
         {
@@ -142,7 +142,7 @@ public class ThirdPersonController : MonoBehaviour
                 jumpElapsedTime = 0;
             }
         }
-
+      
         // Add gravity to Y axis
         directionY = directionY - gravity * Time.deltaTime;
 
