@@ -7,10 +7,14 @@ public class InventarioUI : MonoBehaviour
 
 {
     private TextMeshProUGUI objectText;
+    private int saveCont;
     void Start()
     {
-        objectText = GetComponent<TextMeshProUGUI>();      
         
+        objectText = GetComponent<TextMeshProUGUI>();       
+        saveCont = PlayerPrefs.GetInt("NumberOfObject");
+        objectText.text = saveCont.ToString();
+
     }
 
 
@@ -27,7 +31,6 @@ public class InventarioUI : MonoBehaviour
 
     }
 
-    
   
     
 }
