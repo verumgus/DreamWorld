@@ -12,7 +12,9 @@ public class ManagerSound : MonoBehaviour
     [SerializeField] private Sprite soundOn;
     [SerializeField] private Sprite soundOff;
 
-    [SerializeField]private Image muteImage;
+    [SerializeField] private Image muteImage;
+
+    [SerializeField] private AudioSource clicksound;
    public void SoundControl()
     {
         soundState = !soundState;
@@ -33,5 +35,10 @@ public class ManagerSound : MonoBehaviour
     {
         soundBG.volume = value;
         soundFG.volume = value - 0.8f;
+    }
+
+    public void ClickSoundStart()
+    {
+        clicksound.Play();
     }
 }
