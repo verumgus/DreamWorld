@@ -783,6 +783,7 @@ MonoBehaviour:
   menuPainel: {fileID: 1737508479}
   OptionPainel: {fileID: 0}
   inPauseMenu: {fileID: 1737508479}
+  PauseState: 0
 --- !u!1001 &262339822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1885,7 +1886,8 @@ PrefabInstance:
       propertyPath: OnObjectCollected.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 667483558}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5355323930175264403, guid: 5cce7bc287feded4397cad81b3bfaacd, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 5765541984068224771, guid: 5cce7bc287feded4397cad81b3bfaacd,
@@ -1905,6 +1907,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1268685254}
+    - targetCorrespondingSourceObject: {fileID: 1652628429666751164, guid: 5cce7bc287feded4397cad81b3bfaacd,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1268685255}
   m_SourcePrefab: {fileID: 100100000, guid: 5cce7bc287feded4397cad81b3bfaacd, type: 3}
 --- !u!4 &757205445 stripped
 Transform:
@@ -3390,6 +3396,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c935e4be4c7281441a21136f9d552fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1268685255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268685245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a73b5db2e49016a4d9a610e57ffc3dc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1278865173
