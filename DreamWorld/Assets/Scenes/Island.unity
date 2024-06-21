@@ -1806,6 +1806,16 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 0.85
       objectReference: {fileID: 0}
+    - target: {fileID: 4422426633711997315, guid: 5cce7bc287feded4397cad81b3bfaacd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4669594077910559714, guid: 5cce7bc287feded4397cad81b3bfaacd,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5355323930175264403, guid: 5cce7bc287feded4397cad81b3bfaacd,
         type: 3}
       propertyPath: m_Enabled
@@ -1879,6 +1889,11 @@ PrefabInstance:
     - target: {fileID: 5765541984068224771, guid: 5cce7bc287feded4397cad81b3bfaacd,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8439583966099242212, guid: 5cce7bc287feded4397cad81b3bfaacd,
+        type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8604042263063422233, guid: 5cce7bc287feded4397cad81b3bfaacd,
