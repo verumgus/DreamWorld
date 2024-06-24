@@ -7,17 +7,17 @@ public class DialogueManager : MonoBehaviour
 {
     public Text dialogueText;
     public GameObject dialoguePanel;
-    public string[] dialogueLines;
+    private string[] dialogueLines;
     private int currentLineIndex = 0;
 
     void Start()
     {
-        dialoguePanel.SetActive(false); // Ensure the dialogue panel is initially hidden
+        // dialoguePanel.SetActive(false); // Desativado para iniciar automaticamente na cena inicial
     }
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.T) && dialoguePanel.activeSelf)
+        if (Input.GetKeyDown(KeyCode.Space) && dialoguePanel.activeSelf)
         {
             DisplayNextLine();
         }
@@ -47,5 +47,13 @@ public class DialogueManager : MonoBehaviour
     public void EndDialogue()
     {
         dialoguePanel.SetActive(false);
+    }
+
+    public void StartAutomaticDialogue(string[] lines)
+    {
+        dialogueLines = lines;
+        currentLineIndex = 0;
+        dialoguePanel.SetActive(true);
+        DisplayNextLine();
     }
 }
