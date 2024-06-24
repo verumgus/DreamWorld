@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Mobs
+  - Ground
   layers:
   - Default
   - TransparentFX

@@ -1723,7 +1723,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueText: {fileID: 1980800512}
   dialoguePanel: {fileID: 1764581279}
-  dialogueLines: []
 --- !u!1 &253445566
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,7 +6263,7 @@ PrefabInstance:
     - target: {fileID: 5765541984068224771, guid: 5cce7bc287feded4397cad81b3bfaacd,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 45.39
+      value: 45.099
       objectReference: {fileID: 0}
     - target: {fileID: 5765541984068224771, guid: 5cce7bc287feded4397cad81b3bfaacd,
         type: 3}
@@ -12475,6 +12474,7 @@ MonoBehaviour:
   - "Voc\xEA precisa buscar a verdade , que jaz aqui neste lugar amaldi\xE7oado"
   - "N\xE3o se esque\xE7a do guarda chuva "
   - a monstros nessa regiao
+  - "Encontre o jaz aqui , e volte para seu tempo , n\xE3o a tempo a perder"
 --- !u!1001 &1338430326
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20582,6 +20582,16 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8460647923903695230, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 8460647923903695230, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.53
+      objectReference: {fileID: 0}
     - target: {fileID: 8943203180545225807, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -20613,22 +20623,25 @@ PrefabInstance:
     - {fileID: 350457897264059085, guid: 3fbb2535c0db9ad4a89934f75890f3ad, type: 3}
     - {fileID: 1482746697823922208, guid: 3fbb2535c0db9ad4a89934f75890f3ad, type: 3}
     - {fileID: 3453478289919079825, guid: 3fbb2535c0db9ad4a89934f75890f3ad, type: 3}
+    - {fileID: 5151739096022851406, guid: 3fbb2535c0db9ad4a89934f75890f3ad, type: 3}
+    - {fileID: 5755557992980842333, guid: 3fbb2535c0db9ad4a89934f75890f3ad, type: 3}
+    - {fileID: 3973171910558830781, guid: 3fbb2535c0db9ad4a89934f75890f3ad, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 6769981544473685885, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
         type: 3}
-      insertIndex: 5
+      insertIndex: 2
       addedObject: {fileID: 872649539}
     - targetCorrespondingSourceObject: {fileID: 6769981544473685885, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
         type: 3}
-      insertIndex: 6
+      insertIndex: 3
       addedObject: {fileID: 1317166311}
     - targetCorrespondingSourceObject: {fileID: 6769981544473685885, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
         type: 3}
-      insertIndex: 10
+      insertIndex: 7
       addedObject: {fileID: 613035678}
     - targetCorrespondingSourceObject: {fileID: 6769981544473685885, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
         type: 3}
-      insertIndex: 11
+      insertIndex: 8
       addedObject: {fileID: 141266190}
     - targetCorrespondingSourceObject: {fileID: 6769981544473685885, guid: 3fbb2535c0db9ad4a89934f75890f3ad,
         type: 3}
